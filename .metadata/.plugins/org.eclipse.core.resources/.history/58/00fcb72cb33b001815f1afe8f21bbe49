@@ -1,0 +1,24 @@
+package com.ioex;
+
+public class StringBufferEx2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// 스트링 버펑 생성
+		// 기본 버퍼의 크기는 16
+		// StringBuffer sb = new StringBuffer();
+		
+		// System.out.println(sb.capacity()); // 기본 용량 : 16
+		
+		StringBuffer sb = new StringBuffer("1234567890");
+		
+		System.out.println(sb.capacity()); // 26 -> 16 + 10(1~0까지)
+		
+		// 버퍼에 저장된 문자열의 길이
+		
+		System.out.println(sb.length()); 
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package com.homework180421prac;
+
+import java.awt.event.*;
+
+public class JBAct implements ActionListener {
+	
+	public JBAct() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+		if(e.getSource() == bt1) {
+			
+		}
+		
+		
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.homework180421prac;
+
+public class TestMain01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		double x = 2555;
+		double y = Math.sqrt(x);
+		
+		System.out.println(y);
+
+	}
+
+}

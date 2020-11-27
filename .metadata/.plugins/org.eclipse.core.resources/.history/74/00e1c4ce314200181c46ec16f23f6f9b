@@ -1,0 +1,14 @@
+package com.awtprac;
+
+import java.awt.*;
+
+public class FrameEx1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+
+	}
+
+}

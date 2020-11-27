@@ -1,0 +1,22 @@
+package com.ioex;
+
+public class StringBufferEx1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		StringBuffer sb = new StringBuffer("java");
+		
+		// 추가
+		sb.append("1.8");
+		
+		System.out.println(sb);
+		
+		// 삭제
+		sb.delete(2, 3);
+		
+		System.out.println(sb);
+
+	}
+
+}

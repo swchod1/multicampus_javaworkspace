@@ -1,0 +1,10 @@
+package com.swingex;
+
+public class ImagePrintEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

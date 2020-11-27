@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.homework180421prac.Gaload&apos; to &apos;GaLoad&apos;&#x0D;&#x0A;- Original project: &apos;homework180421&apos;&#x0D;&#x0A;- Original element: &apos;com.homework180421prac.Gaload&apos;&#x0D;&#x0A;- Renamed element: &apos;com.homework180421prac.GaLoad&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Gaload&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.homework180421prac{Gaload.java[Gaload" matchStrategy="1" name="GaLoad" qualified="false" references="true" similarDeclarations="false" stamp="1524374508053" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,43 @@
+package com.homework180408practice;
+
+import java.util.*;
+
+public class SlotMachine extends Thread {
+
+	private int[] temp = new int[3];
+	Random random = new Random();
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+		temp[0] = random.nextInt(9) + 1;
+		System.out.print(temp[0]);
+		run1();
+	}
+
+	public void run1() {
+
+		temp[1] = random.nextInt(9) + 1;
+		System.out.print(temp[1]);
+		run2();
+
+	}
+
+	public void run2() {
+
+		temp[2] = random.nextInt(9) + 1;
+		System.out.print(temp[2]);
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		SlotMachine sm = new SlotMachine();
+		
+		sm.start();
+
+	}
+
+}

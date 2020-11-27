@@ -1,0 +1,58 @@
+package com.stringtokenizer;
+
+import java.util.StringTokenizer;
+
+public class StringTokenizerEx1 {
+	
+	StringTokenizer st;
+	
+	public StringTokenizerEx1(String str) {
+		// TODO Auto-generated constructor stub
+		
+		// 생성자에 전달된 str 인자값을 출력
+		System.out.println("str : " + str);
+
+		// 멤버 객체 생성
+		st = new StringTokenizer(str);
+
+	}
+
+	public StringTokenizerEx1(String str, String delim) {
+		// TODO Auto-generated constructor stub
+
+		// 생성자에 전달된 str 인자값을 출력
+		System.out.println("str : " + str);
+
+		// 문자열을 구분하기 위한 두번째 매개변수를 사용(토큰 식별)
+		// delim("/") --> /로 구분
+		st = new StringTokenizer(str, delim);
+
+	}
+	
+	
+	public void print() {
+		
+		System.out.println("Token count : " + st.countTokens()); // 토큰의 갯수를 센다.
+		
+		while(st.hasMoreTokens()) { // 토큰이 있는지 없는지 구별
+			
+			String token = st.nextToken();
+			System.out.println(token);
+			
+		}
+		
+		System.out.println("======================================");
+		
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		StringTokenizerEx1 st1 = new StringTokenizerEx1("나 보기가 역겨워 가실때에는 말없이 고이");
+		
+		
+
+	}
+
+}

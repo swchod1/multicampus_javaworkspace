@@ -1,0 +1,55 @@
+package exexex;
+
+import java.util.*;
+
+
+public class Ex1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+
+		int x;
+
+		System.out.print("행렬을 입력하세요 : ");
+		x = sc.nextInt();
+
+		int arr[][] = new int[x][x];
+		int n = 1, i, j, k;
+
+		for (i = 0, k = 0; n <= x; i++, k++) {
+			for (j = 0; n <= x; j++) {		
+				
+				arr[i][j] = n++;
+				
+				if (i ==  arr.length - k ) {
+					
+					for (i = k; i <= arr.length - k; i++) {						
+						arr[i][j] = n++;
+						if (j == 0 + k) {
+							for (j = arr[i].length - k; j >=  k ; j--) {
+								arr[i][j] = n++;
+							}
+						}
+					}
+				}
+					
+			}
+			k = -1;
+
+		}
+		
+		
+		for (i = 0 ; i < arr.length ; i++) {
+			for (j = 0; j < arr[i].length; j++) {
+				System.out.printf(arr[i][j]+"\t");
+			}
+			System.out.println();
+		}
+		
+		
+
+	}
+
+}

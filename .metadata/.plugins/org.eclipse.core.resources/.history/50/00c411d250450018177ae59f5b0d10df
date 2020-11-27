@@ -1,0 +1,234 @@
+package com.homework180421prac;
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class Galay extends JFrame implements ActionListener {
+	
+	
+	JLabel l1 = new JLabel("수입   ");
+	JLabel l2 = new JLabel("금액");
+	JLabel l3 = new JLabel("MEMO");
+	JLabel l4 = new JLabel("지출   ");
+	JLabel l5 = new JLabel("금액");
+	JLabel l6 = new JLabel("MEMO");
+	
+	JTextField tf1= new JTextField(9);
+	JTextField tf2= new JTextField(20);
+	JTextField tf3= new JTextField(9);
+	JTextField tf4= new JTextField(20);
+	
+	JComboBox combo1;
+	JComboBox combo2 = new JComboBox();
+	
+	JButton jb1 = new JButton("INCOME");
+	JButton jb2 = new JButton("EXPENSE");
+		
+
+	
+	JTextArea ta1 = new JTextArea();
+	JScrollPane js1 = new JScrollPane(ta1);
+	JTextArea ta2 = new JTextArea();
+	JScrollPane js2 = new JScrollPane(ta2);
+	
+	int won = 0;
+	JLabel jl = new JLabel("현재 잔액 : " + won + "원", JLabel.CENTER);
+	
+	public Galay() {
+		// TODO Auto-generated constructor stub
+		
+		super("태희누나 가계부");
+		
+		Container con = this.getContentPane();
+		con.setLayout(new GridLayout(1, 2));
+		/*
+		JPanel p1 = new JPanel(new GridLayout(2, 1, 10, 10));
+		
+		Icon icon = new ImageIcon("src/img/icon005.jpg");
+		
+		JLabel image = new JLabel(icon);
+		
+		JPanel p11 = new JPanel(new GridLayout(6, 1));
+		
+		JPanel p[] = new JPanel[6];
+		
+		for(int i = 0; i < p.length; i++) {
+			p[i] = new JPanel(new FlowLayout());
+		}
+				
+	
+		JLabel l1 = new JLabel("수입", JLabel.LEFT);
+		JLabel l2 = new JLabel("금액");
+		JLabel l3 = new JLabel("MEMO");
+		JLabel l4 = new JLabel("지출");
+		JLabel l5 = new JLabel("금액");
+		JLabel l6 = new JLabel("MEMO");
+		
+		JTextField tf1= new JTextField(10);
+		JTextField tf2= new JTextField(20);
+		JTextField tf3= new JTextField(10);
+		JTextField tf4= new JTextField(20);
+		
+		
+		String[] in = { "봉급", "주식", "이자", "기타수입" };
+		JComboBox combo1 = new JComboBox(in);
+
+		DefaultComboBoxModel cmodel = new DefaultComboBoxModel();
+		cmodel.addElement("문화생활");
+		cmodel.addElement("식비");
+		cmodel.addElement("주거비");
+		cmodel.addElement("교통비");
+		cmodel.addElement("전화요금");
+		cmodel.addElement("기타지출");
+		JComboBox combo2 = new JComboBox();
+		combo2.setModel(cmodel);
+		
+		JButton jb1 = new JButton("INCOME");
+		JButton jb2 = new JButton("EXPENSE");
+		
+		p[0].add(l1); p[0].add(combo1); p[0].add(l2); p[0].add(tf1);
+		p[1].add(l3); p[1].add(tf2);
+		p[2].add(l4); p[2].add(combo2); p[2].add(l5); p[2].add(tf3);
+		p[3].add(l6); p[3].add(tf4);
+		p[5].add(jb1); p[5].add(jb2);
+
+		for (int i = 0; i < p.length; i++) {
+			p11.add(p[i]);
+		}
+
+		p1.add(image);
+		p1.add(p11);
+		
+		Panel p2 = new Panel(new BorderLayout());
+		
+		Panel p22 = new Panel(new GridLayout(1, 2, 5, 5));
+		
+		JTextArea ta1 = new JTextArea();
+		JScrollPane js1 = new JScrollPane(ta1);
+		JTextArea ta2 = new JTextArea();
+		JScrollPane js2 = new JScrollPane(ta2);
+		
+		p22.add(js1);
+		p22.add(js2);
+		
+		p2.add("Center" ,p22);
+		int won = 0;
+		String s = String.valueOf(won); 
+		p2.add("South", new Label("현재 잔액 : 0원", Label.CENTER));
+		// p2.add("South", new Label("현재 잔액 : " + s + "원", Label.CENTER));
+		// p2.add("South", new Label("현재 잔액 : " + won + "원", Label.CENTER));
+		*/
+		
+		JPanel p1 = new JPanel(new GridLayout(2, 1, 10, 10));
+		
+		Icon icon = new ImageIcon("src/img/icon005.jpg");
+		
+		JLabel image = new JLabel(icon);
+		
+		JPanel p11 = new JPanel(new GridLayout(6, 1));
+		
+		JPanel p[] = new JPanel[6];
+		
+		for(int i = 0; i < p.length; i++) {
+			p[i] = new JPanel(new FlowLayout());
+		}
+		
+		String[] in = { "봉급", "주식", "이자", "기타수입" };
+		combo1 = new JComboBox(in);
+
+		DefaultComboBoxModel cmodel = new DefaultComboBoxModel();
+		cmodel.addElement("문화생활");
+		cmodel.addElement("식비");
+		cmodel.addElement("주거비");
+		cmodel.addElement("교통비");
+		cmodel.addElement("전화요금");
+		cmodel.addElement("기타지출");
+		
+		combo2.setModel(cmodel);
+		
+		
+		p[0].add(l1); p[0].add(combo1); p[0].add(l2); p[0].add(tf1);
+		p[1].add(l3); p[1].add(tf2);
+		p[2].add(l4); p[2].add(combo2); p[2].add(l5); p[2].add(tf3);
+		p[3].add(l6); p[3].add(tf4);
+		p[5].add(jb1); p[5].add(jb2);
+
+		for (int i = 0; i < p.length; i++) {
+			p11.add(p[i]);
+		}
+
+		p1.add(image);
+		p1.add(p11);
+		
+		Panel p2 = new Panel(new BorderLayout());
+		
+		Panel p22 = new Panel(new GridLayout(1, 2, 5, 5));
+		
+		p22.add(js1);
+		p22.add(js2);
+		
+		p2.add("Center" ,p22);
+		p2.add("South", jl);
+		
+		jl.setFont(new Font("돋음체", Font.BOLD, 13));
+		// p2.add("South", new Label("현재 잔액 : " + s + "원", Label.CENTER));
+		// p2.add("South", new Label("현재 잔액 : " + won + "원", Label.CENTER));
+		
+		con.add(p1);
+		con.add(p2);
+		/*		
+		jb1.addActionListener(new JBAct(jb1, combo1, tf1, tf2, ta1, jl, won));
+		jb2.addActionListener(new JBAct(jb2, combo2, tf3, tf4, ta2, jl, won));
+		*/
+		
+		jb1.addActionListener(this);
+		jb2.addActionListener(this);
+		
+		
+		setSize(800, 500);
+		setResizable(false);
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+		if(e.getSource() == jb1) {
+			ta1.append(combo1.getSelectedItem().toString() + "\t" + tf1.getText() + "\n"
+					+ tf2.getText() + "\n\n");
+			
+			won = won + Integer.parseInt(tf1.getText());
+			
+			
+		} else if (e.getSource() == jb2) {
+			ta2.append(combo2.getSelectedItem().toString() + "\t" + tf3.getText() + "\n"
+					+ tf4.getText() + "\n\n");
+			
+			won = won - Integer.parseInt(tf3.getText());
+			
+			
+		}
+		
+		jl.setText("현재 잔액 : " + won + "원");
+		
+		
+	}
+	
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		new Galay();
+		
+
+	}
+
+}

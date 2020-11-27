@@ -1,0 +1,51 @@
+package com.homework180421prac;
+
+public class CalTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str = "3 + 9 / 3 + 2 * 5 * 9 - 9 / 2 = "; // 91.5
+		
+		String s[] = str.split(" ");
+		
+		double d;
+		
+		int count = 0;
+		int a[] = new int[s.length/2];
+		
+		for(int i = 1; i < s.length; i += 2 ) {
+			//System.out.print(s[i] + " ");
+			
+			if(s[i].equals("+") || s[i].equals("-")) {
+				a[i] = i;
+				for(int j = 0; j < i; j++) {
+					if(s[j] == "*") {
+						d = Double.parseDouble(s[j-1]) * Double.parseDouble(s[j+1]);
+						s[j+1] = String.valueOf(d);
+					} else if(s[j] == "/") {
+						d = Double.parseDouble(s[j-1]) / Double.parseDouble(s[j+1]);
+						s[j+1] = String.valueOf(d);
+					}
+				}
+			}
+		}
+		
+		for(int i = 1; i < s.length; i += 2 ) {
+			if(s[i].equals("+")) {
+				d = Double.parseDouble(s[i-1]) + Double.parseDouble(s[i+1]);
+				s[i+1] = String.valueOf(d);
+			} else if(s[i].equals("-")) {
+				d = Double.parseDouble(s[i-1]) - Double.parseDouble(s[i+1]);
+				s[i+1] = String.valueOf(d);
+			} else if(s[i].equals("=")) {
+				System.out.println(s[i-1]);
+			}
+		}
+		
+		
+		
+		
+		
+	}
+}

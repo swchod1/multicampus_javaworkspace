@@ -1,0 +1,77 @@
+package com.homework180408practice;
+
+import java.util.Random;
+
+public class SlotMachineTest2 extends Thread {
+	
+	Random random = new Random();
+	private int[] temp = new int[3];
+	private int count = 0;
+	
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+		synchronized (this) {
+
+			while (true) {
+
+				int x = random.nextInt(3) + 1;
+				System.out.print(x);
+				temp[count] = x;
+
+				if (!Thread.currentThread().getName().equals("Thread-2")) {
+					
+					count += 1;
+
+					try {
+						wait();
+					} catch (Exception e) {
+						// TODO: handle exception
+					}
+
+				} else {
+					
+					if(temp[0] == temp[1] && temp[1] == temp[2]) {
+						break;
+					} else {
+						count = 0;
+						notify();
+					}
+
+				}
+			}
+
+		}
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		SlotMachineTest2 sm1 = new SlotMachineTest2();
+		SlotMachineTest2 sm2 = new SlotMachineTest2();
+		SlotMachineTest2 sm3 = new SlotMachineTest2();
+		
+		System.out.println("-------------");
+		sm1.start();
+		sm2.start();
+		sm3.start();
+		
+		try {
+			sm1.join();
+			sm2.join();
+			sm3.join();
+		} catch (InterruptedException ee) {
+			// TODO: handle exception
+		}
+		System.out.println("\n-------------");
+		
+		
+		System.out.println("축하합니다. 당첨되셨습니다.");
+		
+
+	}
+
+}

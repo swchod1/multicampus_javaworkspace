@@ -1,0 +1,39 @@
+package com.awtprac;
+
+import java.awt.*;
+
+public class BorderEx01 extends Frame {
+
+	Label a, b, c, d, e;
+	
+	public BorderEx01() {
+		// TODO Auto-generated constructor stub
+		
+		super("임시창");
+		
+		a = new Label("상", Label.CENTER);
+		b = new Label("하", Label.CENTER);
+		c = new Label("좌", Label.CENTER);
+		d = new Label("우", Label.CENTER);
+		e = new Label("중", Label.CENTER);
+		
+		setLayout(new BorderLayout());
+		
+		add(a, BorderLayout.NORTH);
+		
+		
+		
+		
+		
+		WinEvent01 we = new WinEvent01();
+		addWindowListener(we);
+		setSize(300, 300);
+		setVisible(true);
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

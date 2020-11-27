@@ -1,0 +1,27 @@
+package com.ioex;
+
+public class StringBufferEx1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		StringBuffer sb = new StringBuffer("java");
+		
+		// 추가
+		sb.append("1.8");
+		
+		System.out.println(sb);
+		
+		// 삭제 시작 인덱스부터 삭제
+		sb.delete(2, 3); // 인덱스 번호 
+		
+		System.out.println(sb); // jaa1.8 ?? 2~3이면 왜 a는 안지워짐???
+		
+		// 삽입 문자와 문자 사이에 삽입
+		sb.insert(3, "A1"); // 3 -> 인덱스 번호
+		
+		System.out.println(sb);
+
+	}
+
+}

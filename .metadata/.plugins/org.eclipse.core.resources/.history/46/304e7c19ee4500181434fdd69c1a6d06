@@ -1,0 +1,11 @@
+package com.homework180421prac;
+
+import java.awt.*;
+
+import java.io.*;
+
+import javax.swing.*;
+
+public class GaLoad {
+
+}

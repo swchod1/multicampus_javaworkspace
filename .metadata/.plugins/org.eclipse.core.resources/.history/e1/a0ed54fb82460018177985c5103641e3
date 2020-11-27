@@ -1,0 +1,24 @@
+package com.homework180421prac;
+
+public class TestMain01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		double x = 2555;
+		double y = Math.sqrt(x);
+		
+		// System.out.println(y);
+		
+		String s = "Math.sqrt(2555)";
+		String w = "2.6 + 2.3";
+		
+		int u = w.indexOf('+');
+		
+		double q = Double.parseDouble(w.substring(0, u-2));
+		System.out.println(q);
+
+	}
+
+}

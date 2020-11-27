@@ -1,0 +1,41 @@
+package com.homework180421prac;
+
+import java.awt.event.*;
+
+import javax.swing.JComboBox;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class JBAct implements ActionListener {
+	
+	JComboBox combo;
+	JTextField tf1;
+	JTextField tf2;
+	JTextArea ta;
+	int won;
+	
+	public JBAct(JComboBox combo, JTextField tf1, JTextField tf2 , JTextArea ta, int won) {
+		// TODO Auto-generated constructor stub
+		
+		this.combo = combo;
+		this.tf1 = tf1;
+		this.tf2 = tf2;
+		this.ta = ta;
+		this.won = won;
+		
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+		
+		ta.setText(combo.getSelectedItem().toString() + "\t" + tf1.getText() + "원\n" + tf2.getText());
+		
+		
+		
+
+	}
+
+}
