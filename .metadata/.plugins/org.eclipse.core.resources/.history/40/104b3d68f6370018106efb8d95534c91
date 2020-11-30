@@ -1,8 +1,0 @@
-package homework180404;
-
-public class ProductVO {
-	
-	private String pname; // 상품명
-	private int price, quantity; // 단가, 수량
-
-}

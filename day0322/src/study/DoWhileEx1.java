@@ -6,6 +6,8 @@ public class DoWhileEx1 {
 
 	public static void main(String[] args) {
 	
+		// GIT TEST 1
+		
 		Scanner sc = new Scanner(System.in);
 		
 		int n, sum =0 ;

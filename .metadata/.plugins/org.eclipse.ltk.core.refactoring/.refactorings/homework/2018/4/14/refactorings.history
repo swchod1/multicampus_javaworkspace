@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;homework180404.Panmailmpl&apos; to &apos;PanmaiImpl&apos;&#x0D;&#x0A;- Original project: &apos;homework&apos;&#x0D;&#x0A;- Original element: &apos;homework180404.Panmailmpl&apos;&#x0D;&#x0A;- Renamed element: &apos;homework180404.PanmaiImpl&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Panmailmpl&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;homework180404{Panmailmpl.java[Panmailmpl" matchStrategy="1" name="PanmaiImpl" qualified="false" references="true" similarDeclarations="false" stamp="1522830721848" textual="false" version="1.0"/>
-</session>

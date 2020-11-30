@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;com.homework180408practice.SlotMachine&apos; to &apos;SlotMachineTest1&apos;&#x0D;&#x0A;- Original project: &apos;homework180408&apos;&#x0D;&#x0A;- Original element: &apos;com.homework180408practice.SlotMachine&apos;&#x0D;&#x0A;- Renamed element: &apos;com.homework180408practice.SlotMachineTest1&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SlotMachine&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.homework180408practice{SlotMachine.java[SlotMachine" matchStrategy="1" name="SlotMachineTest1" qualified="false" references="true" similarDeclarations="false" stamp="1523168241330" textual="false" version="1.0"/>
-</session>

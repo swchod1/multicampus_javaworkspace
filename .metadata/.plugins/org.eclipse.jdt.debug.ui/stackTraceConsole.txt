@@ -1,5 +1,0 @@
-case "%":
-						
-						dtemp[1] = tempdarr1[(i-1)/2] % tempdarr1[(i+1)/2];
-
-						break;
